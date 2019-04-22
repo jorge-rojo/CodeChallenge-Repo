@@ -1,0 +1,57 @@
+﻿@{
+	ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-body">
+				<form method="post" action="/services/LoadUrl">
+					<fieldset>
+						<legend>Enter a Url to analyze a website</legend>
+						<div class="form-group">
+							<label class="form-control-label" for="inputSuccess1">Url</label>
+							<input type="text" placeholder="http://" class="form-control" name="Url">
+							<div class="invalid-feedback"></div>
+							</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-danger">Get Url Information</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</div>
+<br />
+<br />
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-header">Words Analyzer Results</div>
+			<div class="card-body">
+				<div class="no-data d-none">No Data Found.</div>
+				<h2 id="total-word-count"></h2>
+				<canvas id="TopTenWordsChart" width="400" height="400"></canvas>
+			</div>
+		</div>
+	</div>
+</div>
+<br />
+<br />
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-header">Images Analyzer Results</div>
+			<div class="card-body">
+				<div class="no-data d-none">No Data Found.</div>
+				<h3>Image Gallery</h3>
+				<div>
+					<div class="owl-carousel owl-theme"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
